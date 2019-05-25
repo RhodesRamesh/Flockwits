@@ -1,0 +1,10 @@
+import numpy as np
+arr = np.array([[23,34,56,23,45],[98,23,55,34,23],[50,45,67,34,34]])
+print(arr[0:1])
+print(arr[2:])
+#print(arr[0:,4:])
+temp=np.mean(arr[0:,4:])
+print(int(temp))
+#print(arr[1:,])
+temp=np.mean(arr[1:,])
+print(int(temp))
