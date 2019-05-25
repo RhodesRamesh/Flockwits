@@ -1,0 +1,39 @@
+
+import java.util.*; 
+import java.lang.*; 
+import java.io.*; 
+class Friend
+{ 
+    int no; 
+    String name; 
+    public Friend(int no, String name) 
+    { 
+        this.no = no; 
+        this.name = name; 
+    } 
+    public String toString() 
+    { 
+        return this.no + " " + this.name; 
+    } 
+} 
+  
+class namesort implements Comparator<Friend> 
+{  
+    public int compare(Friend x, Friend y) 
+    { 
+        return x.name.compareTo(y.name); 
+    } 
+} 
+class Main 
+{ 
+    public static void main (String[] args) 
+    { 
+        ArrayList<Friend> arr = new ArrayList<Friend>(); 
+        arr.add(new Friend(123456789, "Kakashi")); 
+        arr.add(new Friend(113456789, "Rin")); 
+        arr.add(new Friend(112345678, "Asuma")); 
+        Collections.sort(arr, new namesort()); 
+          for (int i=0; i<arr.size(); i++) 
+            System.out.println(arr.get(i)); 
+    } 
+} 
